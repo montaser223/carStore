@@ -20,6 +20,7 @@ const employeeSchema = new Schema({
     required: "position is required",
     lowercase: true,
   },
+  user: { type: "ObjectId", ref: "Car" },
 });
 
 const employeeModel = model("Employee", employeeSchema);
